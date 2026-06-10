@@ -1,0 +1,46 @@
+.site-footer {
+  position: relative; overflow: hidden; margin-top: 96px;
+  background: #0F172A; color: rgba(255,255,255,0.75);
+}
+.footer-mesh {
+  position: absolute; inset: 0; background: var(--gradient-mesh);
+  opacity: 0.3; pointer-events: none;
+}
+.footer-grid {
+  position: relative; max-width: 1280px; margin: 0 auto;
+  padding: 64px 24px; display: grid; gap: 48px;
+  grid-template-columns: 1fr;
+}
+.footer-grid h4 { color: #fff; font-size: 18px; margin-bottom: 16px; }
+.footer-grid ul { list-style: none; display: flex; flex-direction: column; gap: 8px; font-size: 14px; color: rgba(255,255,255,0.6); }
+.footer-grid ul a:hover { color: #fff; }
+.reach li { display: flex; gap: 12px; align-items: flex-start; }
+.reach svg { color: var(--brand-purple-light); margin-top: 3px; flex-shrink: 0; }
+
+.footer-about { margin-top: 20px; font-size: 14px; line-height: 1.6; color: rgba(255,255,255,0.6); }
+.socials { display: flex; gap: 12px; margin-top: 24px; }
+.social-btn {
+  height: 36px; width: 36px; border-radius: 999px;
+  display: grid; place-items: center;
+  background: rgba(255,255,255,0.06);
+  border: 1px solid rgba(255,255,255,0.1);
+  transition: background 0.25s;
+}
+.social-btn:hover { background: var(--gradient-brand); }
+
+.footer-bottom {
+  position: relative; border-top: 1px solid rgba(255,255,255,0.1);
+  max-width: 1280px; margin: 0 auto; padding: 24px;
+  display: flex; flex-direction: column; gap: 8px; align-items: center;
+  font-size: 12px; color: rgba(255,255,255,0.5);
+}
+
+.site-footer .logo { display: flex; align-items: center; gap: 10px; color: #fff; }
+.site-footer .logo-title { font-family: var(--font-display); font-size: 16px; font-weight: 600; color: #fff; }
+.site-footer .logo-sub { font-size: 10px; letter-spacing: 0.18em; text-transform: uppercase; color: rgba(255,255,255,0.5); }
+
+@media (min-width: 768px) { .footer-grid { grid-template-columns: 1fr 1fr; } }
+@media (min-width: 1024px) {
+  .footer-grid { grid-template-columns: repeat(4, 1fr); }
+  .footer-bottom { flex-direction: row; justify-content: space-between; }
+}

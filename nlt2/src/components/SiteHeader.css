@@ -1,0 +1,137 @@
+.site-header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 50;
+    background: #fff;
+    height: 80px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.08);
+    transition: all 0.3s ease;
+}
+
+.site-header.scrolled {
+    background: rgba(255, 255, 255, 0.7);
+    backdrop-filter: blur(16px) saturate(160%);
+    box-shadow: var(--shadow-soft);
+}
+
+.header-inner {
+    max-width: 1280px;
+  height: 100%;          /* Fill header height */
+  margin: 0 auto;
+  padding: 0 24px;       /* Remove top/bottom padding */
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 24px;
+}
+
+.logo {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.logo-badge {
+    height: 50px;
+    width: 50px;
+    border-radius: 50px;
+    background: var(--gradient-brand);
+    display: grid;
+    place-items: center;
+    color: #fff;
+    font-family: var(--font-display);
+    font-weight: 700;
+    font-size: 18px;
+    box-shadow: var(--shadow-glow);
+}
+
+.logo-text {
+    display: flex;
+    flex-direction: column;
+    line-height: 1.1;
+}
+
+.logo-title {
+    font-family: var(--font-display);
+    font-size: 16px;
+    font-weight: 600;
+}
+
+.logo-sub {
+    font-size: 10px;
+    letter-spacing: 0.18em;
+    text-transform: uppercase;
+    color: var(--muted);
+}
+
+.nav-desktop {
+    display: none;
+    gap: 4px;
+}
+
+.nav-link {
+    padding: 8px 16px;
+    font-size: 14px;
+    font-weight: 500;
+    color: rgba(17, 24, 39, 0.75);
+    border-radius: 8px;
+    transition: color 0.2s;
+}
+
+.nav-link:hover,
+.nav-link.active {
+    color: var(--ink);
+}
+
+.header-cta {
+    display: none;
+    padding: 10px 20px !important;
+}
+
+.menu-btn {
+    padding: 8px;
+    border-radius: 8px;
+    background: rgba(255, 255, 255, 0.6);
+    backdrop-filter: blur(12px);
+}
+
+.nav-mobile {
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+    padding: 16px;
+    background: rgba(255, 255, 255, 0.85);
+    backdrop-filter: blur(16px);
+    border-top: 1px solid var(--border);
+}
+
+.mobile-link {
+    padding: 12px 16px;
+    border-radius: 10px;
+    font-size: 14px;
+    font-weight: 500;
+}
+
+.mobile-link:hover {
+    background: #F3F4F6;
+}
+
+@media (min-width: 1024px) {
+    .nav-desktop {
+        display: flex;
+    }
+
+    .header-cta {
+        display: inline-flex;
+    }
+
+    .menu-btn {
+        display: none;
+    }
+
+    .nav-mobile {
+        display: none;
+    }
+}
