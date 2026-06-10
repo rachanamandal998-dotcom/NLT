@@ -10,7 +10,7 @@ const nav = [
   { to: "/portfolio", label: "Portfolio" },
   { to: "/training", label: "Training" },
   { to: "/contact", label: "Contact" },
-  { to: "/package", label: "Package" },
+  { to: "/packages", label: "Packages" },
 ];
 
 export default function SiteHeader() {
